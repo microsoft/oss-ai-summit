@@ -21,7 +21,7 @@ Explore core LangChain components, agents, and tools across Python and JavaScrip
 🔗 **[Register for the Event](https://developer.microsoft.com/en-us/reactor/events/26502/)**  
 📺 **[Watch the Recording](#)** _(available after the event)_
 
-#### Session Schedule
+#### Sessions
 
 | Title | Slides | Demo | Video |
 |-------|--------|------|-------|
