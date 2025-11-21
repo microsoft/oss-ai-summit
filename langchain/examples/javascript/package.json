@@ -1,0 +1,23 @@
+{
+  "name": "langchainjs-examples",
+  "private": true,
+  "type": "module",
+  "scripts": {},
+  "license": "MIT",
+  "dependencies": {
+    "@langchain/core": "^1.0.1",
+    "@langchain/langgraph": "^1.0.0",
+    "@langchain/ollama": "^1.0.0",
+    "@langchain/openai": "^1.0.0",
+    "dotenv": "^17.2.3",
+    "langchain": "^1.0.1",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@types/node": "^24.9.1",
+    "tsx": "^4.20.6"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}
