@@ -4,13 +4,17 @@ Welcome to the OSS AI Summit! This repository hosts all resources from our serie
 
 The OSS AI Summit demonstrates how open-source frameworks accelerate developer productivity and innovation, while highlighting how Azure provides the infrastructure and services to scale projects from prototype to production.
 
-## 💡 What You'll Learn
+## What You'll Learn
 
 - **Practical Skills:** Gain hands-on knowledge of OSS AI frameworks across multiple programming languages that work seamlessly with Azure AI services
 - **Real-World Applications:** See how open-source innovation combines with Azure AI capabilities to build production-ready solutions
 - **Expert Insights:** Learn from live demos, case studies, and direct Q&A with framework maintainers and industry practitioners
 
-## 📅 Events
+## Azure Free Trial
+
+If you're new to Azure, and need an account to try out the samples highlighted during the events, get an [Azure account for free](https://aka.ms/AzureFreeTrialYT) and you'll get some free Azure credits to get started.
+
+## Events
 
 ### Building with LangChain
 **Date:** December 10, 2025  
@@ -30,11 +34,7 @@ Explore core LangChain components, agents, and tools across Python and JavaScrip
 | MCP in Action: Powering Single & Multi-Agent Systems with LangChain.js | [pptx](/langchain/slides/TODO) / [pdf](/langchain/slides/TODO) | [Single Agent](https://github.com/Azure-Samples/mcp-agent-langchainjs) / [Multi-Agents](https://github.com/Azure-Samples/azure-ai-travel-agents/) | <!-- [📺](#) --> |
 | Inside LangChain: Live Q&A with the Team | | | <!-- [📺](#) --> |
 
-####  Azure Free Trial
-
-If you're new to Azure, get an [Azure account for free](https://aka.ms/AzureFreeTrialYT) and you'll get some free Azure credits to get started.
-
-#### 🔗 Related Resources
+#### Related Resources
 
 - [LangChain JavaScript Documentation](https://docs.langchain.com/oss/javascript/langchain/overview)
 - [LangChain.js for Beginners Course](https://github.com/microsoft/langchainjs-for-beginners)
