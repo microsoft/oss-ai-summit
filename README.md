@@ -30,6 +30,10 @@ Explore core LangChain components, agents, and tools across Python and JavaScrip
 | MCP in Action: Powering Single & Multi-Agent Systems with LangChain.js | [pptx](/langchain/slides/TODO) / [pdf](/langchain/slides/TODO) | [Single Agent](https://github.com/Azure-Samples/mcp-agent-langchainjs) / [Multi-Agents](https://github.com/Azure-Samples/azure-ai-travel-agents/) | <!-- [📺](#) --> |
 | Inside LangChain: Live Q&A with the Team | | | <!-- [📺](#) --> |
 
+####  Azure Free Trial
+
+If you're new to Azure, get an [Azure account for free](https://aka.ms/AzureFreeTrialYT) and you'll get some free Azure credits to get started.
+
 #### 🔗 Related Resources
 
 - [LangChain JavaScript Documentation](https://docs.langchain.com/oss/javascript/langchain/overview)
