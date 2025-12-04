@@ -1,4 +1,10 @@
-# OSS AI Summit - Resources
+<div align="center">
+
+![OSS AI Summit Logo](./summit.jpg)
+
+# OSS AI Summit Resources
+
+</div>
 
 Welcome to the OSS AI Summit! This repository hosts all resources from our series of interactive online events showcasing the power of open-source AI frameworks.
 
