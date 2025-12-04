@@ -41,6 +41,16 @@ Explore core LangChain components, agents, and tools across Python and JavaScrip
 - [MCP Agent with LangChain.js Sample](https://github.com/Azure-Samples/mcp-agent-langchainjs)
 - [Azure AI Travel Agents Sample](https://github.com/Azure-Samples/azure-ai-travel-agents/)
 
+## Join the Community
+
+If you'd like to continue the conversation with us, join our Discord community:
+
+[![Microsoft Foundry Discord](https://img.shields.io/badge/Discord-Microsoft_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
+
+If you have product feedback or errors while building visit:
+
+[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
+
 ---
 
 **🙌 Stay tuned for more OSS AI Summit events!** Follow us for updates on upcoming sessions featuring other popular open-source AI frameworks.
