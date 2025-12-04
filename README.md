@@ -15,9 +15,8 @@ The OSS AI Summit demonstrates how open-source frameworks accelerate developer p
 - **Real-World Applications:** See how open-source innovation combines with Azure AI capabilities to build production-ready solutions
 - **Expert Insights:** Learn from live demos, case studies, and direct Q&A with framework maintainers and industry practitioners
 
-## Azure Free Trial
-
-If you're new to Azure, and need an account to try out the samples highlighted during the events, get an [Azure account for free](https://aka.ms/AzureFreeTrialYT) and you'll get some free Azure credits to get started.
+> [!TIP]
+> If you're new to Azure, and need an account to try out the samples highlighted during the events, get an [Azure account for free](https://aka.ms/AzureFreeTrialYT) and you'll get some free Azure credits to get started.
 
 ## Events
 
