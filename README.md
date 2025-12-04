@@ -1,8 +1,7 @@
 <div align="center">
 
-![OSS AI Summit Logo](./summit.jpg)
-
 # OSS AI Summit Resources
+![OSS AI Summit Logo](./summit.jpg)
 
 </div>
 
