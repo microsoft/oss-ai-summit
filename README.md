@@ -40,7 +40,6 @@ Explore core LangChain components, agents, and tools across Python and JavaScrip
 
 #### Related Resources
 
-- [LangChain JavaScript Documentation](https://docs.langchain.com/oss/javascript/langchain/overview)
 - [LangChain.js for Beginners Course](https://github.com/microsoft/langchainjs-for-beginners)
 - [MCP Agent with LangChain.js Sample](https://github.com/Azure-Samples/mcp-agent-langchainjs)
 - [Azure AI Travel Agents Sample](https://github.com/Azure-Samples/azure-ai-travel-agents/)
