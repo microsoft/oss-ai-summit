@@ -34,7 +34,7 @@ Explore core LangChain components, agents, and tools across Python and JavaScrip
 | Title | Slides | Demo | Video |
 |-------|--------|------|-------|
 | LangChain v1 Explained: Agents, Tools, and Beyond | [pptx](/langchain/slides/TODO) / [pdf](/langchain/slides/TODO) | [code examples](/langchain/examples) | <!-- [📺](#) --> |
-| Fireside Chat: Agents in the Real World | [pptx](/langchain/slides/TODO) / [pdf](/langchain/slides/TODO) | | <!-- [📺](#) --> |
+| Fireside Chat: Agents in the Real World | [pptx](/langchain/slides/TODO) / [pdf](/langchain/slides/TODO) | [Sales Analysis Agent](https://github.com/Azure-Samples/langchain-agent-python/) / [Email Agent](https://github.com/microsoft/local-email-agent) | <!-- [📺](#) --> |
 | MCP in Action: Powering Single & Multi-Agent Systems with LangChain.js | [pptx](/langchain/slides/TODO) / [pdf](/langchain/slides/TODO) | [Single Agent](https://github.com/Azure-Samples/mcp-agent-langchainjs) / [Multi-Agents](https://github.com/Azure-Samples/azure-ai-travel-agents/) | <!-- [📺](#) --> |
 | Inside LangChain: Live Q&A with the Team | | | <!-- [📺](#) --> |
 
@@ -46,6 +46,8 @@ Explore core LangChain components, agents, and tools across Python and JavaScrip
 - [MCP Agent with LangChain.js Sample](https://github.com/Azure-Samples/mcp-agent-langchainjs) (JavaScript)
 - [Azure AI Travel Agents Sample](https://github.com/Azure-Samples/azure-ai-travel-agents/) (Multi-language)
 - [Getting Started with Remote MCP Servers using Azure Container Apps](https://github.com/Azure-Samples/mcp-container-ts/) (JavaScript)
+- [Sales Analysis Agent with MCP and PostgreSQL](https://github.com/Azure-Samples/langchain-agent-python/) (Python)
+- [Local Email Agent](https://github.com/microsoft/local-email-agent) (Python)
 
 ## Join the Community
 
