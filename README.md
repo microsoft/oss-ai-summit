@@ -48,6 +48,7 @@ Explore core LangChain components, agents, and tools across Python and JavaScrip
 - [Getting Started with Remote MCP Servers using Azure Container Apps](https://github.com/Azure-Samples/mcp-container-ts/) (JavaScript)
 - [Sales Analysis Agent with MCP and PostgreSQL](https://github.com/Azure-Samples/langchain-agent-python/) (Python)
 - [Local Email Agent](https://github.com/microsoft/local-email-agent) (Python)
+- [Issue Triager Agent](https://github.com/pamelafox/issue-triager-agent) (Python)
 
 ## Join the Community
 
