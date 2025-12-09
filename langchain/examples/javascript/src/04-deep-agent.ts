@@ -1,4 +1,4 @@
-import { existsSync, mkdirSync, readdirSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { tool } from "langchain";
 import { createDeepAgent, FilesystemBackend, type SubAgent } from "deepagents";
@@ -10,7 +10,7 @@ import 'dotenv/config';
 
 const conferenceTheme = "Developer conference named OSS AI Summit: Building with LangChain.";
 const numIdeas = 3;
-const numStickersPerIdea = 4;
+const numStickersPerIdea = 2;
 const stickerDir = "stickers";
 const ideasFile = "ideas.md";
 
@@ -24,7 +24,8 @@ You manage a creative agency that designs developer conference stickers.
 
 2. Once you have the list of sticker ideas, for each idea, use the "sticker-artist-agent" for each idea to design the stickers.
 
-3. After all stickers are created, generate a basic \`index.html\` HTML page that displays a preview of all the stickers as a grid with their ideas as captions. The preview can be viewed by running the command \`npx http-server stickers\`.
+3. After all stickers are created, generate a basic \`index.html\` HTML page that displays a preview of ALL stickers in a grid layout with their ideas as captions. The images are located in the current folder, same as the HTML file so no need for subfolders.
+The preview can be viewed by running the command \`npx http-server stickers\`.
 `;
 
 const stickerIdeasAgentPrompt = `## Instructions
@@ -45,34 +46,37 @@ Each idea should be a list item with a basename in kebab-casee, the optional sti
 `;
 
 const stickerArtistAgentPrompt = `## Instructions
-Create a prompt for gpt-image-1 to generate a print-ready, die-cut developer conference sticker, using the provided sticker idea.
+You're a sticker artist tasked to create ${numStickersPerIdea} unique sticker designs for the provided sticker idea.
 
-Sticker requirements (must follow EXACTLY):
-- Style: bold, clean vector illustration (no photo), tech/developer vibe, energetic, minimal text (avoid long phrases).
-- Shape: organic die-cut silhouette around the main graphic (not a square); include an even white border (stroke) approx 6–8% of the sticker's max dimension around the outer contour.
-- Background handling (CRITICAL):
-  - Transparent background **ONLY outside the die-cut silhouette**.
-  - **Inside the silhouette:** a **fully opaque, solid white interior fill (#FFFFFF)** that covers 100% of the sticker shape beneath all artwork.
-  - The interior white fill must be continuous and uninterrupted—**no internal transparent pixels, no holes, no see-through areas**, no semi-transparent shading that reveals transparency.
-  - Any colors, gradients, or vector elements must sit on top of the solid white interior base.
-  - Absolutely no transparent border around the artwork; the white border + white base must fully eliminate internal transparency.
-- Colors: vibrant modern conference palette, high contrast, accessible (avoid low-contrast pastel on white).
-- Rendering: crisp vector edges, no drop shadows, no photographic textures, no tiny unreadable glyphs.
-- Print readiness: design centered, no elements touching the outer edge; border clearly visible; no watermark; no licensing or trademark text.
-- Size intent: works when scaled to ~3.4" at 300 DPI (1024px) and still recognizable at 128px.
+1. Create a prompt for gpt-image-1 to generate a print-ready, die-cut developer conference sticker, using the provided sticker idea.
 
-Explicitly describe in the prompt: transparent background outside the silhouette only; fully opaque solid white interior fill covering the entire sticker shape; plain white die-cut border stroke; vector style; conference developer theme; organic outline; no internal transparency.
+  Sticker requirements (must follow EXACTLY):
+  - Style: bold, clean vector illustration (no photo), tech/developer vibe, energetic, minimal text (avoid long phrases).
+  - Shape: organic die-cut silhouette around the main graphic (not a square); include an even white border (stroke) approx 6-8% of the sticker's max dimension around the outer contour.
+  - Background handling (CRITICAL):
+    - Transparent background **ONLY outside the die-cut silhouette**.
+    - **Inside the silhouette:** a **fully opaque, solid white interior fill (#FFFFFF)** that covers 100% of the sticker shape beneath all artwork.
+    - The interior white fill must be continuous and uninterrupted—**no internal transparent pixels, no holes, no see-through areas**, no semi-transparent shading that reveals transparency.
+    - Any colors, gradients, or vector elements must sit on top of the solid white interior base.
+    - Absolutely no transparent border around the artwork; the white border + white base must fully eliminate internal transparency.
+  - Colors: vibrant modern conference palette, high contrast, accessible (avoid low-contrast pastel on white).
+  - Rendering: crisp vector edges, no drop shadows, no photographic textures, no tiny unreadable glyphs.
+  - Print readiness: design centered, no elements touching the outer edge; border clearly visible; no watermark; no licensing or trademark text.
+  - Size intent: works when scaled to ~3.4" at 300 DPI (1024px) and still recognizable at 128px.
 
-After crafting the prompt, use the "create_image" tool with that exact prompt.
+  Explicitly describe in the prompt: transparent background outside the silhouette only; fully opaque solid white interior fill covering the entire sticker shape; plain white die-cut border stroke; vector style; conference developer theme; organic outline; no internal transparency.
 
-Repeat that process ${numStickersPerIdea} times. Sticker are automatically saved to the \`${stickerDir}\` directory.
+2. After crafting the prompt, use the "create_image" tool with that exact prompt.
+  Sticker is automatically saved to the current directory.
 
-Finally respond with the number of stickers created and their filenames.
+3. Repeat that process ${numStickersPerIdea} times.
+
+4. Finally respond with the number of stickers created and their filenames.
 
 ## Tools
 You have access to an image creation tool for generating the sticker images.
 
-- \`create_image\`: Use this to generate an image based on a given prompt and basename. Basename must be in kebab-case without numbering, extension or folder path, just the basename for the file.
+- \`create_image\`: Use this to generate an image based on a given prompt and basename. Basename must be in kebab-case without extension or folder path, just the basename for the file with numbering, example: "my-image-1"
 `;
 
 // Deep Agent Setup ----------------------------------------------------------
@@ -80,9 +84,8 @@ You have access to an image creation tool for generating the sticker images.
 console.log('Deep-stickers: configuration: ', { conferenceTheme, numIdeas, numStickersPerIdea, stickerDir, ideasFile });
 
 const createImage = tool(
-  async ({ prompt, basename }: { prompt: string; basename: string }) => {
-    console.log('create_image: generating image for', basename);
-    console.debug('create_image: prompt:', prompt.slice(0, 240));
+  async ({ prompt, filename }: { prompt: string; filename: string }) => {
+    console.log('create_image: generating image for', filename);
 
     const openai = new OpenAI();
     const response = await openai.images.generate({
@@ -99,7 +102,10 @@ const createImage = tool(
       throw new Error("Image generation failed: No image data returned.");
     }
 
-    const imagePath = saveStickerImage(response.data[0].b64_json!, basename);
+    const imagePath = `${filename}.png`;
+    const imageData = Buffer.from(response.data[0].b64_json!, 'base64');
+    writeFileSync(join(stickerDir, imagePath), imageData);
+
     console.log(`create_image: image generated and saved -> ${imagePath}`);
     return { imagePath };
   },
@@ -108,7 +114,7 @@ const createImage = tool(
     description: "Generate an image based on a given prompt",
     schema: z.object({
       prompt: z.string().describe("Prompt for the image generation"),
-      basename: z.string().describe("Basename in snake-case to save the generated image file, without extension, path or numbering"),
+      filename: z.string().describe("Filename in snake-case to save the generated image file, without extension and path, just the basename with numbering"),
     }),
   },
 );
@@ -146,34 +152,9 @@ try {
     messages: [{ role: "user", content: `## Conference theme and context\n${conferenceTheme}` }],
   });
 
-  console.log("*** Agent result ***:", result);
+  console.log("*** Agent result ***\n", result.messages.at(-1).content);
   console.log('Agent: completed successfully');
 } catch (err) {
   console.error('Agent: invocation failed', err);
   throw err;
-}
-
-// Helpers -------------------------------------------------------------------
-
-function getNextStickerNumber(basename: string): number {
-  const existingFiles = readdirSync(stickerDir)
-    .filter(file => file.startsWith(basename) && file.endsWith(".png"))
-    .map(file => {
-      const match = file.match(/(?:${basename}-)?(\d+)\.png$/);
-      return match ? parseInt(match[1], 10) : 0;
-    })
-    .sort((a, b) => b - a);
-  return existingFiles.length > 0 ? existingFiles[0] + 1 : 1;
-}
-
-function saveStickerImage(imageBase64: string, filename: string): string {
-  console.log(`saveStickerImage: preparing to save image for filename='${filename}'`);
-  const nextNumber = getNextStickerNumber(filename);
-  const targetFilename = join(stickerDir, `${filename}-${nextNumber}.png`);
-
-  const imageData = Buffer.from(imageBase64, 'base64');
-  writeFileSync(targetFilename, imageData);
-
-  console.log(`saveStickerImage: saved image to ${targetFilename}`);
-  return targetFilename;
 }
