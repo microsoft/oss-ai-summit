@@ -40,7 +40,7 @@ Explore core LangChain components, agents, and tools across Python and JavaScrip
 
 #### Related Resources
 
-<!-- - [LangChain for Beginners Course](https://github.com/microsoft/langchain-for-beginners) (Python) -->
+- [LangChain for Beginners Course](https://github.com/microsoft/langchain-for-beginners) (Python)
 - [LangChain.js for Beginners Course](https://github.com/microsoft/langchainjs-for-beginners) (JavaScript)
 - [LangChain4j for Beginners Course](https://github.com/microsoft/LangChain4j-for-Beginners) (Java)
 - [MCP Agent with LangChain.js Sample](https://github.com/Azure-Samples/mcp-agent-langchainjs)
