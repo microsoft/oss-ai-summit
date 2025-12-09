@@ -43,8 +43,9 @@ Explore core LangChain components, agents, and tools across Python and JavaScrip
 - [LangChain for Beginners Course](https://github.com/microsoft/langchain-for-beginners) (Python)
 - [LangChain.js for Beginners Course](https://github.com/microsoft/langchainjs-for-beginners) (JavaScript)
 - [LangChain4j for Beginners Course](https://github.com/microsoft/LangChain4j-for-Beginners) (Java)
-- [MCP Agent with LangChain.js Sample](https://github.com/Azure-Samples/mcp-agent-langchainjs)
-- [Azure AI Travel Agents Sample](https://github.com/Azure-Samples/azure-ai-travel-agents/)
+- [MCP Agent with LangChain.js Sample](https://github.com/Azure-Samples/mcp-agent-langchainjs) (JavaScript)
+- [Azure AI Travel Agents Sample](https://github.com/Azure-Samples/azure-ai-travel-agents/) (Multi-language)
+- [Getting Started with Remote MCP Servers using Azure Container Apps](https://github.com/Azure-Samples/mcp-container-ts/) (JavaScript)
 
 ## Join the Community
 
