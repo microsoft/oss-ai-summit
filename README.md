@@ -34,7 +34,7 @@ Explore core LangChain components, agents, and tools across Python and JavaScrip
 | Title | Slides | Demo | Video |
 |-------|--------|------|-------|
 | LangChain v1 Explained: Agents, Tools, and Beyond | [pptx](/langchain/slides/langchain-v1-explained.pptx)<br>[pdf](/langchain/slides/langchain-v1-explained.pdf) | [Code examples](/langchain/examples) | <!-- [📺](#) --> |
-| Fireside Chat: Agents in the Real World | [pptx](/langchain/slides/TODO)<br>[pdf](/langchain/slides/TODO) | • [Sales Analysis Agent](https://github.com/Azure-Samples/langchain-agent-python/)<br>• [Email Agent](https://github.com/microsoft/local-email-agent) | <!-- [📺](#) --> |
+| Fireside Chat: Agents in the Real World | | • [Sales Analysis Agent](https://github.com/Azure-Samples/langchain-agent-python/)<br>• [Email Agent](https://github.com/microsoft/local-email-agent) | <!-- [📺](#) --> |
 | MCP in Action: Powering Single & Multi-Agent Systems with LangChain.js | [pptx](/langchain/slides/agents-with-langchainjs.pptx)<br>[pdf](/langchain/slides/agents-with-langchainjs.pdf) | • [Single Agent](https://github.com/Azure-Samples/mcp-agent-langchainjs)<br>• [Multi-Agents](https://github.com/Azure-Samples/azure-ai-travel-agents/) | <!-- [📺](#) --> |
 | Inside LangChain: Live Q&A with the Team | | | <!-- [📺](#) --> |
 
