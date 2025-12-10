@@ -14,8 +14,8 @@ load_dotenv()
 def azure_ai() -> str:
     # pip install langchain-azure-ai
 
-    os.environ["AZURE_AI_ENDPOINT"] = os.getenv("AZURE_AI_ENDPOINT", "")
-    os.environ["AZURE_AI_CREDENTIAL"] = os.getenv("AZURE_AI_CREDENTIAL", "")
+    os.environ["AZURE_AI_ENDPOINT"] = "https://models.github.ai/inference"
+    os.environ["AZURE_AI_CREDENTIAL"] = os.environ["GITHUB_TOKEN"]
 
     def get_weather(city: str) -> str:
         """Get weather for a given city."""
@@ -23,7 +23,7 @@ def azure_ai() -> str:
     
 
     agent = create_agent(
-        model="azure_ai:gpt-5-mini",
+        model="azure_ai:gpt-4.1",
         tools=[get_weather],
         system_prompt="You are a helpful assistant",
     )
@@ -40,7 +40,6 @@ def azure_ai() -> str:
 def open_ai_v1():
     # pip install langchain-openai
     
-    # "https://{your_resource_name}.openai.azure.com/openai/v1/",
     resource_name = os.getenv("AZURE_OPEN_AI_RESOURCE_NAME", "your_resource_name")
     base_url = f"https://{resource_name}.openai.azure.com/openai/v1/"
 
@@ -54,7 +53,7 @@ def open_ai_v1():
 
 
     llm = ChatOpenAI(
-    model = "gpt-4.1-mini",
+    model = "gpt-4.1",
     base_url = base_url,
     api_key = token_provider
     )
@@ -84,9 +83,9 @@ def open_ai_v1():
 
 
 if __name__ == "__main__":
-    # result_1 = azure_ai()
-    # print(result_1)
-    result_2 = open_ai_v1()
-    print("")
-    print(f"final answer: {result_2}")
+    result_1 = azure_ai()
+    print(result_1)
+    # result_2 = open_ai_v1()
+    # print("")
+    # print(f"final answer: {result_2}")
     
