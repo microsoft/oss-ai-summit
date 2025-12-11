@@ -4,4 +4,8 @@
   },
   "code-runner.clearPreviousOutput": true,
   "code-runner.saveFileBeforeRun": true,
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#9057c5",
+    "statusBar.foreground": "#ffffff"
+  },
 }

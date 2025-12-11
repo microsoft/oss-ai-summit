@@ -27,16 +27,16 @@ The OSS AI Summit demonstrates how open-source frameworks accelerate developer p
 Explore core LangChain components, agents, and tools across Python and JavaScript. Learn how Azure AI enhances scalability and integration, and see real-world demonstrations of agent workflows powered by LangChain and MCP.
 
 🔗 **[Register for the Event](https://developer.microsoft.com/en-us/reactor/events/26502/)**  
-📺 **[Watch the Recording](#)** _(available after the event)_
+📺 **[Watch the Recording](https://www.youtube.com/watch?v=_n0KBjDYgqY)** 
 
 #### Sessions
 
 | Title | Slides | Demo | Video |
 |-------|--------|------|-------|
-| LangChain v1 Explained: Agents, Tools, and Beyond | [pptx](/langchain/slides/langchain-v1-explained.pptx)<br>[pdf](/langchain/slides/langchain-v1-explained.pdf) | [Code examples](/langchain/examples) | <!-- [📺](#) --> |
-| Fireside Chat: Agents in the Real World | | • [Sales Analysis Agent](https://github.com/Azure-Samples/langchain-agent-python/)<br>• [Email Agent](https://github.com/microsoft/local-email-agent) | <!-- [📺](#) --> |
-| MCP in Action: Powering Single & Multi-Agent Systems with LangChain.js | [pptx](/langchain/slides/agents-with-langchainjs.pptx)<br>[pdf](/langchain/slides/agents-with-langchainjs.pdf) | • [Single Agent](https://github.com/Azure-Samples/mcp-agent-langchainjs)<br>• [Multi-Agents](https://github.com/Azure-Samples/azure-ai-travel-agents/) | <!-- [📺](#) --> |
-| Inside LangChain: Live Q&A with the Team | | | <!-- [📺](#) --> |
+| LangChain v1 Explained: Agents, Tools, and Beyond | [pptx](/langchain/slides/langchain-v1-explained.pptx)<br>[pdf](/langchain/slides/langchain-v1-explained.pdf) | [Code examples](/langchain/examples) | [📺](https://www.youtube.com/live/_n0KBjDYgqY?si=ChAlI6IwlIZGDUIu&t=216) |
+| Fireside Chat: Agents in the Real World | | • [Sales Analysis Agent](https://github.com/Azure-Samples/langchain-agent-python/)<br>• [Email Agent](https://github.com/microsoft/local-email-agent) |[📺](https://www.youtube.com/live/_n0KBjDYgqY?si=FIE6mXPk6vRhSJNt&t=2060) |
+| MCP in Action: Powering Single & Multi-Agent Systems with LangChain.js | [pptx](/langchain/slides/agents-with-langchainjs.pptx)<br>[pdf](/langchain/slides/agents-with-langchainjs.pdf) | • [Single Agent](https://github.com/Azure-Samples/mcp-agent-langchainjs)<br>• [Multi-Agents](https://github.com/Azure-Samples/azure-ai-travel-agents/) | [📺](https://www.youtube.com/live/_n0KBjDYgqY?si=DSxApnZas_LMyis-&t=3482) |
+| Inside LangChain: Live Q&A with the Team | | | [📺](https://www.youtube.com/live/_n0KBjDYgqY?si=ijuxPkDlkQ3dJzd3&t=6341) |
 
 #### Related Resources
 
