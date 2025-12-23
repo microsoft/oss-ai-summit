@@ -5,7 +5,7 @@
   "scripts": {},
   "license": "MIT",
   "dependencies": {
-    "@langchain/core": "^1.0.1",
+    "@langchain/core": "^1.1.8",
     "@langchain/langgraph": "^1.0.2",
     "@langchain/ollama": "^1.0.0",
     "@langchain/openai": "^1.0.0",
